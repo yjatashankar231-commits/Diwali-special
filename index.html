@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#25051f">
+  <title>Happy Diwali | Jatashankar Yadav</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="stage">
+    <div class="shade"></div>
+    <canvas id="fireworks" aria-hidden="true"></canvas>
+
+    <header class="topbar">
+      <label class="name-card">FROM <input id="sender" value="Jatashankar Yadav" maxlength="32" aria-label="Sender name"></label>
+      <label class="name-card">TO <input id="receiver" placeholder="Receiver Name" maxlength="32" aria-label="Receiver name"></label>
+    </header>
+
+    <section class="message-panel">
+      <div class="eyebrow">✨ दीपों का पावन त्योहार ✨</div>
+      <h1>Happy Diwali</h1>
+      <h2>शुभ दीपावली</h2>
+      <p class="blessing">आपके जीवन में सुख, समृद्धि, स्वास्थ्य और खुशियों की रोशनी हमेशा बनी रहे।</p>
+      <div class="personal-message" id="messagePreview">मेरे प्यारे परिवार को दीपावली की हार्दिक शुभकामनाएँ।</div>
+      <div class="clock" id="clock"></div>
+    </section>
+
+    <footer class="signature">JATASHANKAR YADAV</footer>
+
+    <button class="edit-toggle" id="editToggle" type="button">✍ अपना मैसेज लिखें</button>
+    <aside class="editor" id="editor" hidden>
+      <button class="close" id="closeEditor" aria-label="Close">×</button>
+      <h3>अपना Diwali Message बनाएं</h3>
+      <label>आपका नाम
+        <input id="senderEdit" placeholder="अपना नाम लिखें">
+      </label>
+      <label>किसको भेजना है?
+        <input id="receiverEdit" placeholder="जैसे: मेरा प्यारा परिवार">
+      </label>
+      <label>अपना खास मैसेज लिखें
+        <textarea id="customMessage" rows="3" maxlength="240" placeholder="जैसे: मेरे प्यारे परिवार को दीपावली की हार्दिक शुभकामनाएँ..."></textarea>
+      </label>
+      <label>Family members / दोस्तों के नाम और उनके लिए अलग लाइन
+        <textarea id="familyLines" rows="5" placeholder="मम्मी - आपकी जिंदगी खुशियों से जगमगाती रहे।&#10;पापा - आपका आशीर्वाद हमेशा बना रहे।&#10;भाई - सफलता और तरक्की मिले।&#10;बहन - आपके सपने पूरे हों।"></textarea>
+      </label>
+      <p class="hint">हर व्यक्ति का मैसेज अलग लाइन में लिखें। उदाहरण: नाम - आपका संदेश</p>
+      <button class="apply" id="applyMessage" type="button">मैसेज लगाएं</button>
+    </aside>
+
+    <section class="family-card" id="familyCard" hidden>
+      <h3>मेरे अपने लोगों के लिए ❤️</h3>
+      <ul id="familyList"></ul>
+    </section>
+
+    <div class="bottom-controls">
+      <button id="musicBtn" type="button" title="Background music">♫ Music: Off</button>
+      <button id="shareBtn" type="button">WhatsApp पर भेजें</button>
+    </div>
+    <div class="toast" id="toast" role="status"></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
